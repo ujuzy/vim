@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Draw.h" />
+    <ClInclude Include="Globals.h" />
     <ClInclude Include="IObservable.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Observer.h" />
