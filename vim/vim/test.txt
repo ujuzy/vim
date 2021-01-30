@@ -1,0 +1,95 @@
+Vim (text editor)
+From Wikipedia, the free encyclopedia
+Jump to navigationJump to search
+Vim
+Vimlogo.svg
+Vim running in a terminal emulator
+Vim running in a terminal emulator
+Original author(s)	Bram Moolenaar
+Initial release	2 November 1991
+(29 years ago)
+Stable release	8.2.0000[1] (13 December 2019; 13 months ago) [±]
+Repository	
+github.com/vim/vim
+Edit this at Wikidata
+Written in	C, Vim script
+Operating system	Unix, Linux, Windows NT, MS-DOS, macOS, iOS, Android, Haiku, AmigaOS, MorphOS
+Type	Text editor
+License	Free software (Vim License), charityware
+Website	www.vim.org Edit this at Wikidata
+Vim (/vɪm/;[2] a contraction of Vi IMproved) is a clone, with additions, of Bill Joy's vi text editor program for Unix. Vim's author, Bram Moolenaar, based it on the source code for a port of the Stevie editor to the Amiga[3] and released a version to the public in 1991. Vim is designed for use both from a command-line interface and as a standalone application in a graphical user interface. Vim is free and open-source software and is released under a license that includes some charityware clauses, encouraging users who enjoy the software to consider donating to children in Uganda.[4] The license is compatible with the GNU General Public License through a special clause allowing distribution of modified copies "under the GNU GPL version 2 or any later version".[5]
+
+Since its release for the Amiga, cross-platform development has made it available on many other systems. In 2006, it was voted the most popular editor amongst Linux Journal readers;[6] in 2015 the Stack Overflow developer survey found it to be the third most popular text editor,[7] and the fifth most popular development environment in 2019.[8]
+
+
+Contents
+1	History
+2	Interface
+2.1	Modes
+3	Customization
+4	Features and improvements over vi
+5	Vim script
+5.1	Examples
+6	Availability
+7	Neovim
+8	See also
+9	References
+10	External links
+History
+Vim's forerunner, Stevie (ST Editor for VI Enthusiasts), was created by Tim Thompson for the Atari ST in 1987[9][10] and further developed by Tony Andrews[9][11] and G.R. (Fred) Walter.[12][13]
+
+Basing his work on Stevie, Bram Moolenaar began working on Vim for the Amiga computer in 1988, with the first public release (Vim v1.14) in 1991.[14][15][better source needed]
+
+At the time of its first release, the name "Vim" was an acronym for "Vi IMitation", but this changed to "'Vi IMproved" late in 1993.[16]
+
+Release history
+Interface
+
+Graphical Vim (gVim) under GTK+ 2.
+
+Code at the top (Go), opened files, registers ("clipboard manager" and macros history)
+Like vi, Vim's interface is not based on menus or icons but on commands given in a text user interface; its GUI mode, gVim, adds menus and toolbars for commonly used commands but the full functionality is still expressed through its command line mode. Vi (and by extension Vim) tends to allow a typist to keep their fingers on the home row, which can be an advantage for a touch typist.[29]
+
+Vim has a built-in tutorial for beginners called vimtutor. It's usually installed along with Vim, but it exists as a separate executable and can be run with a shell command.[30] There is also the Vim Users' Manual that details Vim's features and a FAQ. This manual can be read from within Vim, or found online.[31][32]
+
+Vim also has a built-in help facility (using the :help command) that allows users to query and navigate through commands and features.
+
+
+Search (grep) inside Vim across files on disk, without plugins
+Modes
+Vim has 12 different editing modes, 6 of which are variants of the 6 basic modes.[33] The basic modes are:
+
+Normal mode - used for editor commands. This is also the default mode, unless the insertmode option is specified.
+Visual mode - similar to normal mode, but used to highlight areas of text. Normal commands are run on the highlighted area, which for an instance can be used to move or edit a selection.
+Select mode - works similarly to visual mode. However, if a printable character, carriage return, or newline (or line feed) is entered, Vim inserts the character, and starts insert mode.[34]
+Insert mode - similar to editing in most modern editors. In insert mode, buffers can be modified with the text inserted.
+Command-line or Cmdline mode - supports a single line input at the bottom of the Vim window. Normal commands (beginning with :), and some other specific letters corresponding to different actions (including pattern search and the filter command) activate this mode.
+Ex mode - similarly to Cmdline mode, it takes a single line input at the bottom of the window. However, in Cmdline mode, entering a command exits the mode when the command is executed. Entering a command in Ex mode doesn't cause the mode to change.
+
+Commands history below: we can edit every command and/or run it again
+Customization
+Vim is highly customizable and extensible, making it an attractive tool for users who demand a large amount of control and flexibility over their text editing environment.[35] Text input is facilitated by a variety of features designed to increase keyboard efficiency. Users can execute complex commands with "key mappings," which can be customized and extended. The "recording" feature allows for the creation of macros to automate sequences of keystrokes and call internal or user-defined functions and mappings. Abbreviations, similar to macros and key mappings, facilitate the expansion of short strings of text into longer ones and can also be used to correct mistakes. Vim also features an "easy" mode for users looking for a simpler text editing solution.[36]
+
+There are many plugins available that extend or add new functionality to Vim, such as linters, integration with Git, showing colors in CSS. These complex scripts are usually written in Vim's internal scripting language, vimscript (also known as VimL),[37] but can be written in other languages as well.
+
+Vim editing JavaScript, with installed plugin GitGutter: pluses at the left show new lines (according to information from Git).
+Vim editing JavaScript, with installed plugin GitGutter: pluses at the left show new lines (according to information from Git).
+There are projects bundling together complex scripts and customizations and aimed at turning Vim into a tool for a specific task or adding a major flavour to its behaviour. Examples include Cream, which makes Vim behave like a click-and-type editor, or VimOutliner, which provides a comfortable outliner for users of Unix-like systems.
+
+Features and improvements over vi
+Vim has a vi compatibility mode, but when that mode isn't used, Vim has many enhancements over vi.[38] However, even in compatibility mode, Vim is not entirely compatible with vi as defined in the Single Unix Specification[39] and POSIX (e.g., Vim does not support vi's open mode, only visual mode). Vim's developers state that it is "very much compatible with Vi".[40]
+
+
+File manager inside vim
+Some of Vim's enhancements include completion, comparison and merging of files (known as vimdiff), a comprehensive integrated help system, extended regular expressions, scripting languages (both native and through alternative scripting interpreters such as Perl, Python, Ruby, Tcl, etc.) including support for plugins, a graphical user interface (known as gvim), limited integrated development environment-like features, mouse interaction (both with and without the GUI), folding, editing of compressed or archived files in gzip, bzip2, zip, and tar format and files over network protocols such as SSH, FTP, and HTTP, session state preservation, spell checking, split (horizontal and vertical) and tabbed windows, Unicode and other multi-language support, syntax highlighting, trans-session command, search and cursor position histories, multiple level and branching undo/redo history which can persist across editing sessions, and visual mode.
+
+While running, Vim saves the user's changes in a swap file with the ".swp" extension. The swap file can be used to recover after a crash. If a user tries to open a file and a swap file already exists, Vim will warn the user, and if the user proceeds, Vim will use a swap file with the extension ".swo" (or, if there is already more than one swap file, ".swn", ".swm", etc.).[41][42] This feature can be disabled.[43]
+
+
+:version command display compilation flags (supported features)
+Vim script
+Vim script (also called Vimscript or VimL)[44] is the scripting language built into Vim.[45] Based on the ex editor language of the original vi editor, early versions of Vim added commands for control flow and function definitions. Since version 7, Vim script also supports more advanced data types such as lists and dictionaries and (a simple form of) object-oriented programming. Built-in functions such as map() and filter() allow a basic form of functional programming, and Vim script has lambda since version 8.0. Vim script is mostly written in an imperative programming style.
+
+Vim macros can contain a sequence of normal-mode commands, but can also invoke ex commands or functions written in Vim script for more complex tasks. Almost all extensions (called plugins or more commonly scripts) of the core Vim functionality are written in Vim script, but plugins can also utilize other languages like Perl,[46] Python,[47] Lua,[48] Ruby,[49] Tcl,[50] or Racket.[51] These plugins can be installed manually, or through a plugin manager such as Vundle, Pathogen, or Vim-Plug.
+
+Vim script files are stored as plain text, similarly to other code, and the filename extension is usually .vim. One notable exception to that is Vim's config file, .vimrc.
